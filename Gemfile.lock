@@ -6,6 +6,7 @@ GEM
     foreman (0.40.0)
       term-ansicolor (~> 1.0.7)
       thor (>= 0.13.6)
+    haml (3.1.6)
     heroku (2.19.2)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -49,6 +50,7 @@ PLATFORMS
 
 DEPENDENCIES
   foreman
+  haml
   heroku
   rack-test
   rspec

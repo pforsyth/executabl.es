@@ -7,8 +7,17 @@ class Site < Sinatra::Base
     @title = "Site"
   end
   get '/' do
-    erb(:main)
+    haml :main, :layout => true
   end
+
+  get '/projects' do
+    haml :projects, :layout => true
+  end
+
+  get '/about' do
+    haml :about, :layout => true
+  end
+  
 end
 
 
