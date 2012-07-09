@@ -1,0 +1,506 @@
+/* === CSS RESET === */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block
+}
+body
+{
+    line-height: 1
+}
+ol, ul
+{
+    list-style: none
+}
+blockquote, q
+{
+    quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after
+{
+    content: '';
+    content: none;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* === End of CSS RESET === */
+body
+{
+    background: url(../images/classy_fabric.png);
+    color: white;
+    font-size: 20px;
+    font-family: 'Asap', sans-serif;
+    overflow: hidden;
+}
+/* === Navigation === */
+.bottom-content
+{
+    position: fixed;
+    z-index: 9999999;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    background-color: #1B1C1F;
+}
+.navigation
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 14px;
+}
+.navigation
+{
+    left: 0;
+    padding: 0 20px;
+}
+.navigation ul
+{
+    margin: 0;
+    padding: 0;
+}
+.navigation li
+{
+    float: left;
+    display: block;
+    margin: 0 10px 0 0; 
+}
+.navigation a
+{
+    display: block;
+    line-height: 40px;
+    border: none;
+    text-align: center;
+    transition: 0.25s;
+    width: auto;
+    padding: 10px 8px;
+    position: relative;
+    -webkit-transition: all ease-in-out 0.4s;
+    -moz-transition: all ease-in-out 0.4s;
+    -o-transition: all ease-in-out 0.4s;
+    transition: all ease-in-out 0.4s;
+    font-family: 'Jockey One', sans-serif;
+}
+.navigation a:hover
+{
+    background: rgba(15,15,15, 0.5);
+    text-decoration: none;
+    color: #D9D9D9;
+}
+
+/* === Home === */
+.home
+{
+    text-align: center;
+    position: relative;
+/*    top: -160px;*/
+}
+.home h1
+{
+    font-size: 75px;
+    line-height: 1.0em;
+    font-family: 'Jockey One', sans-serif;
+    text-transform: uppercase;
+    color: #4eb8e0;
+}
+.description-info
+{
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #d9d9d9;
+    font-family: 'Asap', sans-serif;
+    line-height: 1.5em;
+    text-align: center;
+}
+.description-info  [class*="span"]
+{
+    float: none;
+    margin: 0;
+}
+.wrapper
+{
+    position: absolute;
+    padding: 50px 50px;
+}
+/* === Portfolio === */
+.portfolio
+{
+    top: 460px;
+    left: 10%;
+}
+.page-title
+{
+    font-size: 26px;
+    padding-bottom: 20px;
+}
+.aboutme .page-title, .contact .page-title
+{
+    padding: 25px 0
+}
+.box
+{
+    margin: 0 0 20px 0;
+    background: rgba(10,10,10, 0.5);
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.info h3, .content-box h3
+{
+    font-family: 'Jockey One', sans-serif;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.jcarousel-skin-tango li .info
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 800;
+    padding: 10px 20px 20px;
+    -webkit-transition: all ease-in-out 0.6s;
+    -moz-transition: all ease-in-out 0.6s;
+    -o-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+    filter: alpha(opacity=@opacity * 100);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+    background: #fafafa;
+    margin: 4px;
+    font-family: 'Asap', sans-serif;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.jcarousel-skin-tango li:hover .info, .jcarousel-skin-tango li:hover .zoom-icon
+{
+    z-index: 1000;
+    filter: alpha(opacity=@opacity * 100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+.jcarousel-skin-tango li .info p
+{
+    margin: 0;
+    line-height: 20px;
+    padding: 5px 0;
+}
+.jcarousel-item [class*="span"]
+{
+    margin-left: 10px
+}
+.arrow-top
+{
+    background-image: url(../images/arrow.png);
+    right: 20px;
+    top: -11px;
+    width: 22px;
+    height: 11px;
+    position: absolute;
+}
+.zoom-icon
+{
+    background-color: #FAFAFA;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 4px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 6px;
+    -webkit-transition: all ease-in-out 0.6s;
+    -moz-transition: all ease-in-out 0.6s;
+    -o-transition: all ease-in-out 0.6s;
+    transition: all ease-in-out 0.6s;
+    filter: alpha(opacity=@opacity * 100);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;
+}
+.zoom
+{
+    background: url(../images/zoom.png) 0 0 no-repeat;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    width: 32px;
+    height: 22px;
+    display: block;
+}
+.zoom:hover
+{
+    background-position: 0 -20px;
+    color: #00aeef;
+}
+/* === Twitter === */
+.tweet, .query
+{
+    display: block;
+    float: right;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    color: #d9d9d9;
+    padding: 19px 30px;
+}
+.tweet_list
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+}
+.tweet_list .awesome, .tweet_list .epic
+{
+    text-transform: uppercase
+}
+.tweet_list li
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+    list-style-type: none;
+}
+.tweet_list li a
+{
+    color: #4EB8E0
+}
+.tweet_list li a:hover
+{
+    text-decoration: underline
+}
+.tweet_text
+{
+    padding: 2px
+}
+.twitter-bird
+{
+    background: url("../images/twitter-bird.png");
+    background-repeat: no-repeat;
+    height: 31px;
+    position: absolute;
+    left: -20px;
+    width: 34px;
+    z-index: 3;
+    top: 17px;
+    display: block;
+}
+ul.social
+{
+    margin: 0 0 9px 22px;
+    position: absolute;
+    right: 30px;
+    top: -50px;
+    padding: 4px;
+}
+/* === Social === */
+.social li
+{
+    background-repeat: no-repeat;
+    display: inline;
+    float: left;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    margin: 3px 0 0 3px;
+    height: 33px;
+    position: relative;
+    width: 35px;
+   -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.social li:first-child
+{
+    margin: 0
+}
+.social li:active
+{
+    top: 3px
+}
+li.facebook
+{
+    background-image: url("../images/social/social.png")
+}
+li.facebook:hover
+{
+    background-position: 0 -33px
+}
+li.twitter
+{
+    background-image: url("../images/social/social.png");
+    background-position: 0 -67px;
+}
+li.twitter:hover
+{
+    background-position: 0 -101px
+}
+li.google
+{
+    background-image: url("../images/social/social.png");
+    background-position: 0 -134px;
+}
+li.google:hover
+{
+    background-position: 0 -167px
+}
+li.forrst
+{
+    background-image: url("../images/social/social.png");
+    background-position: 0 -200px;
+}
+li.forrst:hover
+{
+    background-position: 0 -233px
+}
+/* === About me === */
+.aboutme
+{
+    top: 1260px;
+    left: 14%;
+    width: 400px;
+}
+.content-box
+{
+    background: #fafafa;
+    margin: 4px;
+    font-family: 'Asap', sans-serif;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    padding: 15px 20px 20px;
+}
+/* === Contact === */
+.contact
+{
+    top: 1262px;
+    left: 1330px;
+}
+iframe
+{
+    margin: 4px  4px  2px 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.contact-input
+{
+    width: 189px
+}
+.contact-textarea
+{
+    width: 403px
+}
+.sp-canvas
+{
+    display: none
+}
+.arrow
+{
+    position: relative;
+    display: inline-block;
+}
+.demo .arrow
+{
+    font-size: 20px;
+    animation: point-down 0.5s alternate infinite;
+}
+.rotations
+{
+    left: 2185px;
+    top: 660px;
+    width: 460px;
+    transform: rotate(-90deg) translateY(2.5em);
+}
+.rotations .upside-down
+{
+    font-size: 42px;
+    text-align: right;
+    transform: rotate(180deg) translateY(3em);
+}
+.source
+{
+    left: 2200px;
+    top: -800px;
+    width: 400px;
+    transform: rotate(90deg) translateX(50px);
+}
+.follow
+{
+    width: 475px;
+    left: 1100px;
+    top: -950px;
+    transform: rotate(90deg) translateX(50px);
+}
+.follow .big
+{
+    font-size: 40px
+}
+.border-top{
+    background-image: url("../images/top-border.png");
+    background-repeat: repeat;
+    height: 5px;
+    position: absolute;
+    top: -5px;
+    width: 100%;
+}
+.border-bottom{
+    background-image: url("../images/bottom-border.png");
+    background-repeat: repeat;
+    height: 5px;
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+}
+/* === Tabs === */
+.tab-content{
+     background: #fff;
+     margin: 0 4px 4px 4px;
+     padding: 15px 20px 20px;
+     -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius:0 0 4px 4px;
+    -o-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+}
+.tab-pane p{
+        margin: 0 ;
+}
+.tab-pane h4{
+      color: #333333;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -126px;
+  margin-left: -231px;
+}

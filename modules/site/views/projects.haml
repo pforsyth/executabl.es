@@ -1,0 +1,35 @@
+.span10
+  .wrapper
+    %h2.page-title Projects
+    .span5{:style => "margin-left: 0px;"}
+      .thumbnail.box
+        %img{:alt => "", :src => "images/projects/stachify.png", :id => "project_thumb"}/
+    .span7.box
+      .tabbable
+        %ul#tabs.nav.nav-tabs
+          %li.active
+            %a{"data-toggle" => "tab", :href => "#tab1", :id => "stachify"} stachify
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab2", :id => "mobile_feeds"} mobile feeds
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3", :id => "hooked_hands"} hooked hands
+          %li
+            %a{"data-toggle" => "tab", :href => "#tab3", :id => "executables"} executables
+          
+        .tab-content
+          #tab1.tab-pane.active
+            %p
+              Mirum est notare quam littera gothica, quam nunc putamus parum claram.
+              Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
+          #tab2.tab-pane
+            %p
+              Est notare quam littera gothica, quam nunc putamus parum claram.
+              Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
+              
+:javascript
+  $(document).ready(function(){
+    $('a[data-toggle="tab"]').on('shown', function (e) {
+      var tab_id = $(e.target).attr('id');
+      $("#project_thumb").attr("src", "images/projects/"+tab_id+".png");
+    });
+  });
