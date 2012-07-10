@@ -4,7 +4,7 @@
     .span5{:style => "margin-left: 0px;"}
       .thumbnail.box
         %img{:alt => "", :src => "images/projects/stachify.png", :id => "project_thumb"}/
-    .span7.box
+    .span6.box
       .tabbable
         %ul#tabs.nav.nav-tabs
           %li.active
@@ -13,18 +13,26 @@
             %a{"data-toggle" => "tab", :href => "#tab2", :id => "mobile_feeds"} mobile feeds
           %li
             %a{"data-toggle" => "tab", :href => "#tab3", :id => "hooked_hands"} hooked hands
-          %li
-            %a{"data-toggle" => "tab", :href => "#tab3", :id => "executables"} executables
           
         .tab-content
           #tab1.tab-pane.active
             %p
-              Mirum est notare quam littera gothica, quam nunc putamus parum claram.
-              Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
+            The Stachify service receives a picture that you text in, applies a mustache to all the recognizable faces, then sends it back to your mobile phone. You can post the picture to facebook or to the gallery on the stachify web site. It uses the face.com API for face detection and the
+            %a.preview{:href => "https://github.com/afeld/mustachio"} mustachio
+            library for mustache application. The Mogreet APIs are used for sending and receiving images via mobile.
+            %br
+            %br
+            Stachify is a Sinatra app running on heroku. It uses postgres and datamapper for database access. HAML for templating. Resque via redistogo.com for offloading image processing to background tasks. Amazon S3 for image storage. Bitly API for URL shortening.
+            %br
+            = succeed "." do
+              %a.preview{:href => "http://stachify.me"} http://stachify.me
+            
           #tab2.tab-pane
             %p
-              Est notare quam littera gothica, quam nunc putamus parum claram.
-              Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima.
+              The mobilefeeds.co site aggregates over 50 audio and image feeds from all over the web, and let's users sign up to have the feeds sent to their mobile phone via MMS. Users can login via facebook and select which feeds they want to receive. When the feeds are updated by the feed owner, the mobilefeeds service will send the content to the mobile phone.              
+              %br
+              %br
+              Mobile Feeds is a Padrino app running on an Amazon EC2 micro instance. It uses mysql and datamapper for database access. ERB for templating. Omniauth for facebook login. Capistrano for deployment. Twitter Bootstrap and jQuery for front end.
               
 :javascript
   $(document).ready(function(){
@@ -32,4 +40,13 @@
       var tab_id = $(e.target).attr('id');
       $("#project_thumb").attr("src", "images/projects/"+tab_id+".png");
     });
+
+    function popwindow(e){
+      e.preventDefault();
+      var href=$(e.target).attr('href');
+      window.open(href,'','menubar=1,location=1,toolbar=1,width=1024,height=768');
+    };    
+    
+    $('.preview').bind('click',function(e){popwindow(e)});
+    
   });
