@@ -17,22 +17,30 @@
         .tab-content
           #tab1.tab-pane.active
             %p
+            %a.preview{:href => "http://stachify.me"} http://stachify.me            
+            %br
             The Stachify service receives a picture that you text in, applies a mustache to all the recognizable faces, then sends it back to your mobile phone. You can post the picture to facebook or to the gallery on the stachify web site. It uses the face.com API for face detection and the
             %a.preview{:href => "https://github.com/afeld/mustachio"} mustachio
             library for mustache application. The Mogreet APIs are used for sending and receiving images via mobile.
             %br
             %br
             Stachify is a Sinatra app running on heroku. It uses postgres and datamapper for database access. HAML for templating. Resque via redistogo.com for offloading image processing to background tasks. Amazon S3 for image storage. Bitly API for URL shortening.
-            %br
-            = succeed "." do
-              %a.preview{:href => "http://stachify.me"} http://stachify.me
-            
           #tab2.tab-pane
             %p
+              %a.preview{:href => "http://mobilefeeds.co"} http://mobilefeeds.co
+              %br
               The mobilefeeds.co site aggregates over 50 audio and image feeds from all over the web, and let's users sign up to have the feeds sent to their mobile phone via MMS. Users can login via facebook and select which feeds they want to receive. When the feeds are updated by the feed owner, the mobilefeeds service will send the content to the mobile phone.              
               %br
               %br
               Mobile Feeds is a Padrino app running on an Amazon EC2 micro instance. It uses mysql and datamapper for database access. ERB for templating. Omniauth for facebook login. Capistrano for deployment. Twitter Bootstrap and jQuery for front end.
+          #tab3.tab-pane
+            %p
+              %a.preview{:href => "http://www.hookedhands.com"} http://www.hookedhands.com
+              %br
+              HookedHands.com is a simple homepage designed to showcase the talents of 
+              = succeed "," do
+                %a.preview{:href => "https://twitter.com/hookedhands"} @hookedhands           
+              crochet extraordinaire. The site is entirely client side, powered by Twitter Bootstrap and jQuery. It features a slideshow to browse her portfolio, her most recent blog posts (pulled from feedburner), and a Twitter widget that shows her four most recent tweets.  Graphics and fonts were provided by a third party.
               
 :javascript
   $(document).ready(function(){
