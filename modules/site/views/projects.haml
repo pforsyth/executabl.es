@@ -46,15 +46,22 @@
   $(document).ready(function(){
     $('a[data-toggle="tab"]').on('shown', function (e) {
       var tab_id = $(e.target).attr('id');
+      // $('#project_thumb').
       $("#project_thumb").attr("src", "images/projects/"+tab_id+".png");
     });
 
-    function popwindow(e){
+    function popWindow(e){
       e.preventDefault();
       var href=$(e.target).attr('href');
       window.open(href,'','menubar=1,location=1,toolbar=1,width=1024,height=768');
     };    
     
-    $('.preview').bind('click',function(e){popwindow(e)});
+    function preloadImages(arrayOfImages) {
+      $(arrayOfImages).each(function(){
+        $('<img/>')[0].src = this;
+      });
+    };
     
+    $('.preview').bind('click',function(e){popWindow(e)});
+    preloadImages(['images/projects/stachify.png','images/projects/mobile_feeds.png','images/projects/hooked_hands.png']);    
   });
